@@ -5,7 +5,7 @@ complexNet provides functions to easily generate and iterate complex networks th
 ## Installation
 ```r
 # Install release version from CRAN
-install.packages("complexNet")
+# Not yet available on CRAN install.packages("complexNet")
 
 # Install development version from GitHub
 devtools::install_github("marcosmolla/complexNet")

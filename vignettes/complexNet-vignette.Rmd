@@ -1,5 +1,5 @@
 ---
-title: "compleyNet Vignette"
+title: "complexNet-vignette"
 author: "Marco Smolla"
 output: rmarkdown::html_vignette
 vignette: >
