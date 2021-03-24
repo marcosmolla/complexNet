@@ -1,11 +1,20 @@
-# Random Graph Generation, takes number of nodes (size), average degree (deg)
-setGeneric("init_graph", function(size, deg) {standardGeneric("init_graph")})
+#' Initialising a random graph
+#'
+#' @param n Number of nodes in the network
+#' @param deg Average degree in the network
+#' @return Returns an adjacency matrix
+#' @examples
+#' init_graph(n = 10, deg = 4)
+#' @export
+
+# Random Graph Generation, takes number of nodes (n), average degree (deg)
+setGeneric("init_graph", function(n, deg) {standardGeneric("init_graph")})
 setMethod(f="init_graph",
-          signature=c(size = "numeric",
+          signature=c(n = "numeric",
                       deg = "numeric"),
-          definition = function(size, deg){
-           P <- (deg*size)/(size^2) # connection probability
-           ADJM <- matrix(0,nrow=size,ncol=size)# Set adjacency matrix
+          definition = function(n, deg){
+           P <- (deg*n)/(n^2) # connection probability
+           ADJM <- matrix(0,nrow=n,ncol=n)# Set adjacency matrix
            diag <- lower.tri(ADJM, diag = FALSE) # Select one half of the matrix
            npairs <- sum(diag) # Number of pairs without diagonal (using only one matrix traingle)
            ADJM[diag] <- runif(n = npairs, min = 0, max = 1) <= P;
