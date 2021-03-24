@@ -1,0 +1,7 @@
+home:
+  title: An R package for complex networks
+  description: Create and iterate complex networks
+  author: Marco Smolla
+template:
+  params:
+    bootswatch: flatly
