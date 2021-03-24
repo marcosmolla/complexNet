@@ -4,12 +4,12 @@
 \alias{make_bnr}
 \title{Dynamic networks updating for Pb, Pn, Pr networks}
 \usage{
-make_bnr(size, pb, pn, pr, singleparent)
+make_bnr(n, pb, pn, pr, singleparent)
 }
 \arguments{
-\item{size}{Number of vertices (population size)}
+\item{n}{Number of vertices (population size)}
 
-\item{pb}{Probability to connect to parent}
+\item{pb}{Probability to connect to parent (default is 1)}
 
 \item{pn}{Probability to connect to neighbour of parent(s)}
 
@@ -18,17 +18,10 @@ the parent}
 
 \item{singleparent}{Logical. If TRUE the focal individual connects to one
 parent with probability pb. If FALSE the individual connects to two parents
-each with probability pb.}
+each with probability pb. Default is TRUE.}
 }
 \value{
-If all inputs are integer and logical, then the output
-  will be an integer. If integer overflow
-  (<http://en.wikipedia.org/wiki/Integer_overflow>) occurs, the output
-  will be NA with a warning. Otherwise it will be a length-one numeric or
-  complex vector.
-
-  Zero-length vectors have sum 0 by definition. See
-  <http://en.wikipedia.org/wiki/Empty_sum> for more details.
+Function returns an adjacncy-matrix.
 }
 \description{
 `make_bnr()` returns an adjacency matrix.
@@ -37,5 +30,5 @@ If all inputs are integer and logical, then the output
 This function will ...
 }
 \examples{
-make_bnr(size = 100, pb = 1, pn = .2, pr = .001, singleparent = F)
+make_bnr(n = 100, pb = 1, pn = .2, pr = .01, singleparent = TRUE)
 }

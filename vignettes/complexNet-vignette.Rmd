@@ -1,0 +1,29 @@
+---
+title: "compleyNet Vignette"
+author: "Marco Smolla"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{complexNet-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+options(rmarkdown.html_vignette.check_title = FALSE)
+```
+
+```{r setup}
+library(complexNet)
+```
+
+```{r}
+adjm <- make_bnr(n = 100, pb = 1, pn = .2, pr = .01, singleparent = TRUE)
+adjm <- make_bnr(n = 100, pb = 1, pn = .2, pr = .01)
+adjm <- make_bnr(n = 100, pn = .2, pr = .01, singleparent = TRUE)
+adjm <- make_bnr(n = 100, pn = .2, pr = .01)
+```
+
