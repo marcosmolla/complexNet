@@ -15,3 +15,4 @@ Suggests:
     rmarkdown
 VignetteBuilder: knitr
 Imports: methods
+URL: https://marcosmolla.github.io/complexNet/, https://github.com/marcosmolla/complexNet
