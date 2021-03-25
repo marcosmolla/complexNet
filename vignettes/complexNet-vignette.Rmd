@@ -1,6 +1,11 @@
 ---
-title: "complexNet-vignette"
+title: "Introduction to complexNet"
+description: "A brief introduction to complex networks in R"
 author: "Marco Smolla"
+opengraph:
+  twitter:
+    card: summary
+    creator: "@smollamarco"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{complexNet-vignette}

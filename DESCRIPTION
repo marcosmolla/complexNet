@@ -15,3 +15,9 @@ Suggests:
 VignetteBuilder: knitr
 Imports: methods
 URL: https://marcosmolla.github.io/complexNet/, https://github.com/marcosmolla/complexNet
+Authors@R: c(
+    person("Marco", "Smolla", , "drsmolla@icloud.com", role = c("aut", "cre"),
+      comment = c(ORCID = "0000-0001-6367-8765")
+    )
+  )
+  

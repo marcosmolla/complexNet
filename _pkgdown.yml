@@ -2,6 +2,7 @@ home:
   title: An R package for complex networks
   description: Create and iterate complex networks
   author: Marco Smolla
+  url: https://marcosmolla.github.io/complexNet
 template:
   params:
     bootswatch: flatly
