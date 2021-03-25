@@ -129,7 +129,10 @@
     <p>Iterating a bnr network</p>
     </div>
 
-    <pre class="usage"><span class='fu'>iterate_bnr</span><span class='op'>(</span><span class='va'>adjm</span>, <span class='va'>singleparent</span>, <span class='va'>pb</span>, <span class='va'>pn</span>, <span class='va'>pr</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>iterate_bnr</span><span class='op'>(</span><span class='va'>adjm</span>, <span class='va'>np</span>, <span class='va'>pb</span>, <span class='va'>pn</span>, <span class='va'>pr</span><span class='op'>)</span>
+
+<span class='co'># S4 method for matrix,numeric,numeric,numeric,numeric</span>
+<span class='fu'>iterate_bnr</span><span class='op'>(</span><span class='va'>adjm</span>, <span class='va'>np</span>, <span class='va'>pb</span>, <span class='va'>pn</span>, <span class='va'>pr</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -139,10 +142,8 @@
       <td><p>Adjacency matrix</p></td>
     </tr>
     <tr>
-      <th>singleparent</th>
-      <td><p>Logical. If TRUE the focal individual connects to one
-parent with probability pb. If FALSE the individual connects to two parents
-each with probability pb. Default is TRUE.</p></td>
+      <th>np</th>
+      <td><p>numeric vector setting ids for the newborn (i.e. which individual will be replaced with a new one) and a parent(s). Length 2 or 3. If you want to randomly select an id for the newborn (first value) and parents (second and third value), simply use c(0,0) or c(0,0,0). For one parent, the focal individual connects to this parent with probability pb. For two parent values, the individual connects to two parents each with probability pb.</p></td>
     </tr>
     <tr>
       <th>pb</th>
@@ -162,10 +163,20 @@ the parent</p></td>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>Returns an iterated version of the supplied adjacency matrix.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>If you just want to iterate the graph you can use <code>np=c(0,0)</code> or <code>np=c(0,0,0)</code>. However, the function does not return the ids of the newborn and the parent(s). If you want to keep track of the ids that are changed, you should provide these as an input to the function.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fl'>1</span><span class='op'>+</span><span class='fl'>1</span>
-</div><div class='output co'>#&gt; [1] 2</div></pre>
+    <pre class="examples"><div class='input'><span class='co'># Set up linking parameters:</span>
+<span class='va'>pb</span> <span class='op'>&lt;-</span> <span class='fl'>1</span>
+<span class='va'>pn</span> <span class='op'>&lt;-</span> <span class='fl'>0.2</span>
+<span class='va'>pr</span> <span class='op'>&lt;-</span> <span class='fl'>0.01</span>
+<span class='co'># Generate a network based on these parameters</span>
+<span class='va'>adjm_t0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='make_bnr.html'>make_bnr</a></span><span class='op'>(</span>n <span class='op'>=</span> <span class='fl'>100</span>, np<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>0</span><span class='op'>)</span>, pb <span class='op'>=</span> <span class='va'>pb</span>, pn <span class='op'>=</span> <span class='va'>pn</span>, pr <span class='op'>=</span> <span class='va'>pr</span><span class='op'>)</span>
+<span class='co'># Iterate the network</span>
+<span class='va'>adjm_t1</span> <span class='op'>&lt;-</span> <span class='fu'>iterate_bnr</span><span class='op'>(</span>adjm <span class='op'>=</span> <span class='va'>adjm_t0</span>, np<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>0</span><span class='op'>)</span>, pb <span class='op'>=</span> <span class='va'>pb</span>, pn <span class='op'>=</span> <span class='va'>pn</span>, pr <span class='op'>=</span> <span class='va'>pr</span><span class='op'>)</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
