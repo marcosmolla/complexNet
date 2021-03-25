@@ -2,9 +2,21 @@
 % Please edit documentation in R/iterate_bnr.R
 \name{iterate_bnr}
 \alias{iterate_bnr}
+\alias{iterate_bnr,matrix,logical,numeric,numeric,numeric-method}
+\alias{iterate_bnr,matrix,missing,numeric,numeric,numeric-method}
+\alias{iterate_bnr,matrix,logical,missing,numeric,numeric-method}
+\alias{iterate_bnr,matrix,missing,missing,numeric,numeric-method}
 \title{Iterating a bnr network}
 \usage{
 iterate_bnr(adjm, singleparent, pb, pn, pr)
+
+\S4method{iterate_bnr}{matrix,logical,numeric,numeric,numeric}(adjm, singleparent, pb, pn, pr)
+
+\S4method{iterate_bnr}{matrix,missing,numeric,numeric,numeric}(adjm, singleparent, pb, pn, pr)
+
+\S4method{iterate_bnr}{matrix,logical,missing,numeric,numeric}(adjm, singleparent, pb, pn, pr)
+
+\S4method{iterate_bnr}{matrix,missing,missing,numeric,numeric}(adjm, singleparent, pb, pn, pr)
 }
 \arguments{
 \item{adjm}{Adjacency matrix}

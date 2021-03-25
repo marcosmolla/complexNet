@@ -11,9 +11,11 @@
 #' @return Returns an iterated version of the supplied adjacency matrix.
 #' @examples
 #' 1+1
+#' @rdname iterate_bnr
 #' @export
-
 setGeneric("iterate_bnr", function(adjm, singleparent, pb, pn, pr) {standardGeneric("iterate_bnr")})
+
+#' @rdname iterate_bnr
 setMethod(f="iterate_bnr",
           signature=c(adjm = "matrix",
                       singleparent = "logical",
@@ -50,25 +52,24 @@ setMethod(f="iterate_bnr",
            return(adjm)
           })
 
+#' @rdname iterate_bnr
 setMethod(f="iterate_bnr",
           signature=c(adjm = "matrix", singleparent = "missing", pb = "numeric", pn = "numeric", pr = "numeric"),
           definition = function(adjm, singleparent, pb, pn, pr){
            iterate_bnr(adjm = adjm, singleparent = TRUE, pb = pb, pn = pn, pr = pr)
           })
 
+#' @rdname iterate_bnr
 setMethod(f="iterate_bnr",
           signature=c(adjm = "matrix", singleparent = "logical", pb = "missing", pn = "numeric", pr = "numeric"),
           definition = function(adjm, singleparent, pb, pn, pr){
            iterate_bnr(adjm = adjm, singleparent = singleparent, pb = 1, pn = pn, pr = pr)
           })
 
+#' @rdname iterate_bnr
 setMethod(f="iterate_bnr",
           signature=c(adjm = "matrix", singleparent = "missing", pb = "missing", pn = "numeric", pr = "numeric"),
           definition = function(adjm, singleparent, pb, pn, pr){
            iterate_bnr(adjm = adjm, singleparent = TRUE, pb = 1, pn = pn, pr = pr)
           })
 
-# adjm <- make_bnr(n = 100, pb = 1, pn = .2, pr = .001, singleparent = F)
-# # adjm2 <- iterate_bnr(adjm = adjm, singleparent = F, pb = 1, pn = .2, pr = .001); image(adjm-adjm2)
-# net <- as.undirected(graph_from_adjacency_matrix(adjm))
-# plot(net, vertex.label=NA, vertex.size=3)

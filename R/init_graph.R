@@ -1,14 +1,15 @@
-#' Initialising a random graph
+#' Initialising a random graph, takes number of nodes (n), average degree (deg)
 #'
 #' @param n Number of nodes in the network
 #' @param deg Average degree in the network
 #' @return Returns an adjacency matrix
 #' @examples
 #' init_graph(n = 10, deg = 4)
+#' @rdname init_graph
 #' @export
-
-# Random Graph Generation, takes number of nodes (n), average degree (deg)
 setGeneric("init_graph", function(n, deg) {standardGeneric("init_graph")})
+
+#' @rdname init_graph
 setMethod(f="init_graph",
           signature=c(n = "numeric",
                       deg = "numeric"),

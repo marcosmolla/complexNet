@@ -2,9 +2,21 @@
 % Please edit documentation in R/make_bnr.R
 \name{make_bnr}
 \alias{make_bnr}
+\alias{make_bnr,numeric,numeric,numeric,numeric,logical-method}
+\alias{make_bnr,numeric,missing,numeric,numeric,logical-method}
+\alias{make_bnr,numeric,numeric,numeric,numeric,missing-method}
+\alias{make_bnr,numeric,missing,numeric,numeric,missing-method}
 \title{Dynamic networks updating for Pb, Pn, Pr networks}
 \usage{
 make_bnr(n, pb, pn, pr, singleparent)
+
+\S4method{make_bnr}{numeric,numeric,numeric,numeric,logical}(n, pb, pn, pr, singleparent)
+
+\S4method{make_bnr}{numeric,missing,numeric,numeric,logical}(n, pb, pn, pr, singleparent)
+
+\S4method{make_bnr}{numeric,numeric,numeric,numeric,missing}(n, pb, pn, pr, singleparent)
+
+\S4method{make_bnr}{numeric,missing,numeric,numeric,missing}(n, pb, pn, pr, singleparent)
 }
 \arguments{
 \item{n}{Number of vertices (population size)}
@@ -27,7 +39,7 @@ Function returns an adjacncy-matrix.
 `make_bnr()` returns an adjacency matrix.
 }
 \details{
-This function will ...
+This function takes adj.matrix (ADJM), probabilities to connect to parent(s), neighbours, and randoms (PB, PN, PR), the index of the parent (if NULL, default, NPARENT number of individuals are randomly choosen as parent), number of parents (NPARENT, default is 1)
 }
 \examples{
 make_bnr(n = 100, pb = 1, pn = .2, pr = .01, singleparent = TRUE)

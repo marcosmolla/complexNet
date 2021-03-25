@@ -2,9 +2,12 @@
 % Please edit documentation in R/init_graph.R
 \name{init_graph}
 \alias{init_graph}
-\title{Initialising a random graph}
+\alias{init_graph,numeric,numeric-method}
+\title{Initialising a random graph, takes number of nodes (n), average degree (deg)}
 \usage{
 init_graph(n, deg)
+
+\S4method{init_graph}{numeric,numeric}(n, deg)
 }
 \arguments{
 \item{n}{Number of nodes in the network}
@@ -15,7 +18,7 @@ init_graph(n, deg)
 Returns an adjacency matrix
 }
 \description{
-Initialising a random graph
+Initialising a random graph, takes number of nodes (n), average degree (deg)
 }
 \examples{
 init_graph(n = 10, deg = 4)

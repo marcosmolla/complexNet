@@ -1,11 +1,8 @@
-# Dynamic network updating, takes adj.matrix (ADJM), probabilities to connecto to parent(s), neighbours, and randoms (PB, PN, PR), the index of the parent (if NULL, default, NPARENT number of individuals are randomly choosen as parent), number of parents (NPARENT, default is 1)
-
-
 #' Dynamic networks updating for Pb, Pn, Pr networks
 #'
 #' `make_bnr()` returns an adjacency matrix.
 #'
-#' This function will ...
+#'  This function takes adj.matrix (ADJM), probabilities to connect to parent(s), neighbours, and randoms (PB, PN, PR), the index of the parent (if NULL, default, NPARENT number of individuals are randomly choosen as parent), number of parents (NPARENT, default is 1)
 #'
 #' @param n Number of vertices (population size)
 #' @param pb Probability to connect to parent (default is 1)
@@ -18,9 +15,11 @@
 #' @return Function returns an adjacncy-matrix.
 #' @examples
 #' make_bnr(n = 100, pb = 1, pn = .2, pr = .01, singleparent = TRUE)
+#' @rdname make_bnr
 #' @export
-
 setGeneric("make_bnr", function(n, pb, pn, pr, singleparent) {standardGeneric("make_bnr")})
+
+#' @rdname make_bnr
 setMethod(f="make_bnr",
           signature=c(n = "numeric",
                       pb = "numeric",
@@ -36,6 +35,7 @@ setMethod(f="make_bnr",
            return(adjm)
           })
 
+#' @rdname make_bnr
 setMethod(f="make_bnr",
           signature=c(n = "numeric", pb = "missing", pn = "numeric", pr = "numeric", singleparent = "logical"),
           definition = function(n, pb, pn, pr, singleparent){
@@ -43,6 +43,7 @@ setMethod(f="make_bnr",
            make_bnr(n = n, pb = 1, pn = pn, pr = pr, singleparent = singleparent)
           })
 
+#' @rdname make_bnr
 setMethod(f="make_bnr",
           signature=c(n = "numeric", pb = "numeric", pn = "numeric", pr = "numeric", singleparent = "missing"),
           definition = function(n, pb, pn, pr, singleparent){
@@ -50,6 +51,7 @@ setMethod(f="make_bnr",
            make_bnr(n = n, pb = pb, pn = pn, pr = pr, singleparent = TRUE)
           })
 
+#' @rdname make_bnr
 setMethod(f="make_bnr",
           signature=c(n = "numeric", pb = "missing", pn = "numeric", pr = "numeric", singleparent = "missing"),
           definition = function(n, pb, pn, pr, singleparent){
