@@ -2,28 +2,17 @@
 % Please edit documentation in R/iterate_bnr.R
 \name{iterate_bnr}
 \alias{iterate_bnr}
-\alias{iterate_bnr,matrix,logical,numeric,numeric,numeric-method}
-\alias{iterate_bnr,matrix,missing,numeric,numeric,numeric-method}
-\alias{iterate_bnr,matrix,logical,missing,numeric,numeric-method}
-\alias{iterate_bnr,matrix,missing,missing,numeric,numeric-method}
+\alias{iterate_bnr,matrix,numeric,numeric,numeric,numeric-method}
 \title{Iterating a bnr network}
 \usage{
-iterate_bnr(adjm, singleparent, pb, pn, pr)
+iterate_bnr(adjm, np, pb, pn, pr)
 
-\S4method{iterate_bnr}{matrix,logical,numeric,numeric,numeric}(adjm, singleparent, pb, pn, pr)
-
-\S4method{iterate_bnr}{matrix,missing,numeric,numeric,numeric}(adjm, singleparent, pb, pn, pr)
-
-\S4method{iterate_bnr}{matrix,logical,missing,numeric,numeric}(adjm, singleparent, pb, pn, pr)
-
-\S4method{iterate_bnr}{matrix,missing,missing,numeric,numeric}(adjm, singleparent, pb, pn, pr)
+\S4method{iterate_bnr}{matrix,numeric,numeric,numeric,numeric}(adjm, np, pb, pn, pr)
 }
 \arguments{
 \item{adjm}{Adjacency matrix}
 
-\item{singleparent}{Logical. If TRUE the focal individual connects to one
-parent with probability pb. If FALSE the individual connects to two parents
-each with probability pb. Default is TRUE.}
+\item{np}{numeric vector setting ids for the newborn (i.e. which individual will be replaced with a new one) and a parent(s). Length 2 or 3. If you want to randomly select an id for the newborn (first value) and parents (second and third value), simply use c(0,0) or c(0,0,0). For one parent, the focal individual connects to this parent with probability pb. For two parent values, the individual connects to two parents each with probability pb.}
 
 \item{pb}{Probability to connect to parent. Default is 1.}
 
@@ -38,6 +27,16 @@ Returns an iterated version of the supplied adjacency matrix.
 \description{
 Iterating a bnr network
 }
+\details{
+If you just want to iterate the graph you can use \code{np=c(0,0)} or \code{np=c(0,0,0)}. However, the function does not return the ids of the newborn and the parent(s). If you want to keep track of the ids that are changed, you should provide these as an input to the function.
+}
 \examples{
-1+1
+# Set up linking parameters:
+pb <- 1
+pn <- 0.2
+pr <- 0.01
+# Generate a network based on these parameters
+adjm_t0 <- make_bnr(n = 100, np=c(0,0), pb = pb, pn = pn, pr = pr)
+# Iterate the network
+adjm_t1 <- iterate_bnr(adjm = adjm_t0, np=c(0,0), pb = pb, pn = pn, pr = pr)
 }

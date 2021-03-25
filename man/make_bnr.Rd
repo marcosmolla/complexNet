@@ -2,24 +2,20 @@
 % Please edit documentation in R/make_bnr.R
 \name{make_bnr}
 \alias{make_bnr}
-\alias{make_bnr,numeric,numeric,numeric,numeric,logical-method}
-\alias{make_bnr,numeric,missing,numeric,numeric,logical-method}
-\alias{make_bnr,numeric,numeric,numeric,numeric,missing-method}
-\alias{make_bnr,numeric,missing,numeric,numeric,missing-method}
+\alias{make_bnr,numeric,numeric,numeric,numeric,numeric-method}
+\alias{make_bnr,numeric,numeric,missing,numeric,numeric-method}
 \title{Dynamic networks updating for Pb, Pn, Pr networks}
 \usage{
-make_bnr(n, pb, pn, pr, singleparent)
+make_bnr(n, np, pb, pn, pr)
 
-\S4method{make_bnr}{numeric,numeric,numeric,numeric,logical}(n, pb, pn, pr, singleparent)
+\S4method{make_bnr}{numeric,numeric,numeric,numeric,numeric}(n, np, pb, pn, pr)
 
-\S4method{make_bnr}{numeric,missing,numeric,numeric,logical}(n, pb, pn, pr, singleparent)
-
-\S4method{make_bnr}{numeric,numeric,numeric,numeric,missing}(n, pb, pn, pr, singleparent)
-
-\S4method{make_bnr}{numeric,missing,numeric,numeric,missing}(n, pb, pn, pr, singleparent)
+\S4method{make_bnr}{numeric,numeric,missing,numeric,numeric}(n, np, pb, pn, pr)
 }
 \arguments{
 \item{n}{Number of vertices (population size)}
+
+\item{np}{numeric vector setting ids for the newborn (i.e. which individual will be replaced with a new one) and a parent(s). Length 2 or 3. If you want to randomly select an id for the newborn (first value) and parents (second and third value), simply use c(0,0) or c(0,0,0).}
 
 \item{pb}{Probability to connect to parent (default is 1)}
 
@@ -27,20 +23,19 @@ make_bnr(n, pb, pn, pr, singleparent)
 
 \item{pr}{Probability to connect to individuals that are not connected to
 the parent}
-
-\item{singleparent}{Logical. If TRUE the focal individual connects to one
-parent with probability pb. If FALSE the individual connects to two parents
-each with probability pb. Default is TRUE.}
 }
 \value{
 Function returns an adjacncy-matrix.
 }
 \description{
-`make_bnr()` returns an adjacency matrix.
+This function takes adj.matrix (ADJM), probabilities to connect to parent(s), neighbours, and randoms (PB, PN, PR), the index of the parent (if NULL, default, NPARENT number of individuals are randomly choosen as parent), number of parents (NPARENT, default is 1).
 }
 \details{
-This function takes adj.matrix (ADJM), probabilities to connect to parent(s), neighbours, and randoms (PB, PN, PR), the index of the parent (if NULL, default, NPARENT number of individuals are randomly choosen as parent), number of parents (NPARENT, default is 1)
+It is important to notw that the
 }
 \examples{
-make_bnr(n = 100, pb = 1, pn = .2, pr = .01, singleparent = TRUE)
+make_bnr(n = 100, np = c(0,0), pb = 1, pn = .2, pr = .01)
+}
+\references{
+none
 }

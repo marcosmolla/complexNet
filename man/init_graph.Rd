@@ -3,7 +3,7 @@
 \name{init_graph}
 \alias{init_graph}
 \alias{init_graph,numeric,numeric-method}
-\title{Initialising a random graph, takes number of nodes (n), average degree (deg)}
+\title{Initialising a random graph}
 \usage{
 init_graph(n, deg)
 
@@ -18,7 +18,7 @@ init_graph(n, deg)
 Returns an adjacency matrix
 }
 \description{
-Initialising a random graph, takes number of nodes (n), average degree (deg)
+init_graph takes number of nodes (n) and average degree (deg) to generate a random graph.
 }
 \examples{
 init_graph(n = 10, deg = 4)

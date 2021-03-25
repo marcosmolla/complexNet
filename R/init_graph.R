@@ -1,4 +1,7 @@
-#' Initialising a random graph, takes number of nodes (n), average degree (deg)
+#' @title
+#' Initialising a random graph
+#' @description
+#' init_graph takes number of nodes (n) and average degree (deg) to generate a random graph.
 #'
 #' @param n Number of nodes in the network
 #' @param deg Average degree in the network
