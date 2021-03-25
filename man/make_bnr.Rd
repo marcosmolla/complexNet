@@ -34,7 +34,7 @@ This function takes adj.matrix (ADJM), probabilities to connect to parent(s), ne
 It is important to notw that the
 }
 \examples{
-make_bnr(n = 100, np = c(0,0), pb = 1, pn = .2, pr = .01)
+make_bnr(n = 10, np = c(0,0), pb = 1, pn = .2, pr = .01)
 }
 \references{
 none

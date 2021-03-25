@@ -11,7 +11,7 @@
 #' the parent
 #' @return Function returns an adjacncy-matrix.
 #' @examples
-#' make_bnr(n = 100, np = c(0,0), pb = 1, pn = .2, pr = .01)
+#' make_bnr(n = 10, np = c(0,0), pb = 1, pn = .2, pr = .01)
 #' @rdname make_bnr
 #' @export
 setGeneric("make_bnr", function(n, np, pb, pn, pr) {standardGeneric("make_bnr")})
