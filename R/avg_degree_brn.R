@@ -1,13 +1,12 @@
 #' @title
 #' Expected average degree of BRN networks
 #' @description
-#' Calculates the expected average degree of a BRN network (single parent only) based on the approximation by Ilany &amp; Akcay, 2016 (see details).
+#' Calculates the expected average degree of a BRN network (single parent only) based on the approximation by Ilany and Akcay, 2016 (see details).
 #'
 #' @param n Number of nodes in the network
 #' @param pb Probability to connect to parent (default is 1)
 #' @param pn Probability to connect to neighbour of parent(s)
 #' @param pr Probability to connect to individuals that are not connected to
-#' @return Returns an adjacency matrix
 #' @examples
 #' # Expected degree
 #' avg_degree_brn(n = 100, pb = 1, pn = .2, pr = .02)
@@ -15,6 +14,7 @@
 #' adjm <- make_bnr(n = 100, np = c(0,0), pb = 1, pn = .2, pr = .02)
 #' mean(adjm) * 100
 #' @details The expected average degree \eqn{\bar{d}} is calculated as \deqn{ \bar{d} = \frac{(N-1)(p_b + (N-2)p_r)}{N-1-(N-2)(p_n - p_r)} }
+#' @references Ilany, A., and Akçay, E. (2016). Personality and Social Networks: A Generative Model Approach. Integrative and Comparative Biology, 56(6), 1197–1205. \url{https://doi.org/10.1093/icb/icw068}
 #' @rdname avg_degree_brn
 #' @export
 setGeneric("avg_degree_brn", function(n, pb, pn, pr) {standardGeneric("avg_degree_brn")})
