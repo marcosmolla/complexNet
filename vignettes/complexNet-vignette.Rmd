@@ -38,4 +38,3 @@ adjm <- make_bnr(n = 100, np = c(0,0), pn = .2, pr = .01)
 # Two parent example, with random offspring and parents
 adjm <- make_bnr(n = 100, np = c(0,0,0), pb = 1, pn = .2, pr = .01)
 ```
-
