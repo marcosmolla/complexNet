@@ -40,7 +40,7 @@
 
 
 <meta property="og:title" content="Expected average degree of BRN networks — avg_degree_brn" />
-<meta property="og:description" content="Calculates the expected average degree of a BRN network (single parent only) based on the approximation by Ilany &amp;amp;amp; Akcay, 2016 (see details)." />
+<meta property="og:description" content="Calculates the expected average degree of a BRN network (single parent only) based on the approximation by Ilany and Akcay, 2016 (see details)." />
 
 
 
@@ -126,7 +126,7 @@
     </div>
 
     <div class="ref-description">
-    <p>Calculates the expected average degree of a BRN network (single parent only) based on the approximation by Ilany &amp;amp; Akcay, 2016 (see details).</p>
+    <p>Calculates the expected average degree of a BRN network (single parent only) based on the approximation by Ilany and Akcay, 2016 (see details).</p>
     </div>
 
     <pre class="usage"><span class='fu'>avg_degree_brn</span><span class='op'>(</span><span class='va'>n</span>, <span class='va'>pb</span>, <span class='va'>pn</span>, <span class='va'>pr</span><span class='op'>)</span>
@@ -155,12 +155,12 @@
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
-
-    <p>Returns an adjacency matrix</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The expected average degree \(\bar{d}\) is calculated as $$ \bar{d} = \frac{(N-1)(p_b + (N-2)p_r)}{N-1-(N-2)(p_n - p_r)} $$</p>
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>Ilany, A., and Akçay, E. (2016). Personality and Social Networks: A Generative Model Approach. Integrative and Comparative Biology, 56(6), 1197–1205. <a href='https://doi.org/10.1093/icb/icw068'>https://doi.org/10.1093/icb/icw068</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Expected degree</span>
