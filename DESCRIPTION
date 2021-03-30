@@ -1,10 +1,11 @@
 Package: complexNet
 Type: Package
-Title: complexNet Network Generation
+Title: Complex Network Generation
 Version: 0.1.0
-Author: Marco Smolla
-Maintainer: Marco Smolla <smolla@sas.upenn.edu>
-Description: This package provides a set of functions to easily generate and iterate complex networks. The functions can be used to generate realistic networks with a wide range of different clustering, density, and average path length. 
+Authors@R: c(person("Marco", "Smolla", , "drsmolla@icloud.com", role = c("aut", "cre"),comment = c(ORCID = "0000-0001-6367-8765")))
+Description: Providing a set of functions to easily generate and iterate complex networks.
+ The functions can be used to generate realistic networks with a wide range of different clustering, density, and average path length.
+ For more information consult research articles by Amiyaal Ilany and Erol Akcay (2016) <doi:10.1093/icb/icw068> and Ilany and Erol Akcay (2016) <doi:10.1101/026120>, which have inspired many methods in this package.
 License: GPL-3
 Encoding: UTF-8
 LazyData: false
@@ -15,9 +16,5 @@ Suggests:
 VignetteBuilder: knitr
 Imports: methods
 URL: https://marcosmolla.github.io/complexNet/, https://github.com/marcosmolla/complexNet
-Authors@R: c(
-    person("Marco", "Smolla", , "drsmolla@icloud.com", role = c("aut", "cre"),
-      comment = c(ORCID = "0000-0001-6367-8765")
-    )
-  )
-  
+BugReports: https://github.com/marcosmolla/complexNet/issues
+Date: 2021-03-30 09:00:02 UTC 
