@@ -15,7 +15,7 @@ init_graph(n, deg)
 \item{deg}{Average degree in the network}
 }
 \value{
-Returns an adjacency matrix
+Returns an unweighted (binary) adjacency matrix, where each cell represents the presence (1) or absence (0) of an interaction between the row and the column individual.
 }
 \description{
 init_graph takes number of nodes (n) and average degree (deg) to generate a random graph.

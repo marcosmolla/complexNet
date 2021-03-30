@@ -5,7 +5,7 @@
 #'
 #' @param n Number of nodes in the network
 #' @param deg Average degree in the network
-#' @return Returns an adjacency matrix
+#' @return Returns an unweighted (binary) adjacency matrix, where each cell represents the presence (1) or absence (0) of an interaction between the row and the column individual.
 #' @examples
 #' init_graph(n = 10, deg = 4)
 #' @rdname init_graph

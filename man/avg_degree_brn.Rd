@@ -18,6 +18,9 @@ avg_degree_brn(n, pb, pn, pr)
 
 \item{pr}{Probability to connect to individuals that are not connected to}
 }
+\value{
+Returns the expected average degree of a BRN network as a numeric value. This value is an analytic result and not a numeric approximation (compare examples below).
+}
 \description{
 Calculates the expected average degree of a BRN network (single parent only) based on the approximation by Ilany and Akcay, 2016 (see details).
 }
@@ -32,5 +35,5 @@ adjm <- make_bnr(n = 100, np = c(0,0), pb = 1, pn = .2, pr = .02)
 mean(adjm) * 100
 }
 \references{
-Ilany, A., and Akçay, E. (2016). Personality and Social Networks: A Generative Model Approach. Integrative and Comparative Biology, 56(6), 1197–1205. \url{https://doi.org/10.1093/icb/icw068}
+Ilany, A., and Akçay, E. (2016). Personality and Social Networks: A Generative Model Approach. Integrative and Comparative Biology, 56(6), 1197–1205. \doi{10.1093/icb/icw068}
 }

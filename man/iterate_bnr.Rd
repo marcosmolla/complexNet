@@ -22,7 +22,7 @@ iterate_bnr(adjm, np, pb, pn, pr)
 the parent}
 }
 \value{
-Returns an iterated version of the supplied adjacency matrix.
+Returns an iterated version of the supplied adjacency matrix as a numeric matrix.
 }
 \description{
 Iterating a bnr network
