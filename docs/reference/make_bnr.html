@@ -40,7 +40,7 @@
 
 
 <meta property="og:title" content="Dynamic networks updating for Pb, Pn, Pr networks — make_bnr" />
-<meta property="og:description" content="This function takes adj.matrix (ADJM), probabilities to connect to parent(s), neighbours, and randoms (PB, PN, PR), the index of the parent (if NULL, default, NPARENT number of individuals are randomly choosen as parent), number of parents (NPARENT, default is 1)." />
+<meta property="og:description" content="This function takes adj.matrix (ADJM), probabilities to connect to parent(s), neighbours, and randoms (PB, PN, PR), the index of the parent (if NULL, default, NPARENT number of individuals are randomly chosen as parent), number of parents (NPARENT, default is 1)." />
 
 
 
@@ -126,7 +126,7 @@
     </div>
 
     <div class="ref-description">
-    <p>This function takes adj.matrix (ADJM), probabilities to connect to parent(s), neighbours, and randoms (PB, PN, PR), the index of the parent (if NULL, default, NPARENT number of individuals are randomly choosen as parent), number of parents (NPARENT, default is 1).</p>
+    <p>This function takes adj.matrix (ADJM), probabilities to connect to parent(s), neighbours, and randoms (PB, PN, PR), the index of the parent (if NULL, default, NPARENT number of individuals are randomly chosen as parent), number of parents (NPARENT, default is 1).</p>
     </div>
 
     <pre class="usage"><span class='fu'>make_bnr</span><span class='op'>(</span><span class='va'>n</span>, <span class='va'>np</span>, <span class='va'>pb</span>, <span class='va'>pn</span>, <span class='va'>pr</span><span class='op'>)</span>
@@ -165,13 +165,10 @@ the parent</p></td>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>Function returns an adjacncy-matrix.</p>
+    <p>Returns an unweighted (binary) adjacency matrix, where each cell represents the presence (1) or absence (0) of an interaction between the row and the column individual.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>It is important to notw that the</p>
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
-
-    <p>none</p>
+    <p>It is important to note that, although all three parameters (PB, PN, PR) are probabilities, i.e. values between 0 and 1, the same value (say 0.2) means something different for each of them. This is because, PB is the probability to connect to the parent(s), i.e. 1 or two individuals. In contrast, PN and PR are the probabilities to connect to neighbours of the parent(s) or to random other individuals. In the case of a small social neighbourhood of the parent(s) a PR of 0.2 would mean to connect to a large amount of individuals in the remaining network. Therefore, it is important to keep in mind that the value of both (or all three) values is important and not the individual one in isolation.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>make_bnr</span><span class='op'>(</span>n <span class='op'>=</span> <span class='fl'>10</span>, np <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>0</span><span class='op'>)</span>, pb <span class='op'>=</span> <span class='fl'>1</span>, pn <span class='op'>=</span> <span class='fl'>.2</span>, pr <span class='op'>=</span> <span class='fl'>.01</span><span class='op'>)</span>
