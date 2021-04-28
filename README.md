@@ -13,7 +13,7 @@ My goal with this package is to provide an easy way to generate complex networks
 ## Installation
 ```r
 # Install release version from CRAN
-# Not yet available on CRAN install.packages("complexNet")
+install.packages("complexNet")
 
 # Install development version from GitHub
 devtools::install_github("marcosmolla/complexNet")
