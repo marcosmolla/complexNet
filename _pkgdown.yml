@@ -4,5 +4,8 @@ home:
   author: Marco Smolla
   url: https://marcosmolla.github.io/complexNet
 template:
-  params:
-    bootswatch: flatly
+  bootstrap: 4
+  bootswatch: materia
+  bslib:
+    bg: "#202123"
+    fg: "#B8BCC2"
