@@ -98,7 +98,6 @@
 </h1>
 <hr>
 <p>complexNet provides functions to easily generate and iterate complex networks. These networks rely on socially inherited and random connections to members of a population, as presented by <a href="https://www.nature.com/articles/ncomms12084">Ilany &amp; Akcay (2016)</a>. Their modelling framework has been shown to generate realistic networks with a wide range of different clustering, density, and average path length. In <a href="https://advances.sciencemag.org/content/5/8/eaaw0609">Smolla &amp; Akcay (2019)</a> we have used the same algorithms to generate networks and have them dynamically evolve.</p>
-<p>My goal with this package is to provide an easy way to generate complex networks that rely on</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
@@ -120,7 +119,7 @@ The schematic depicts how a new individual joins the population (as one other in
 <div id="usage" class="section level2">
 <h2 class="hasAnchor">
 <a href="#usage" class="anchor"></a>Usage</h2>
-<p>To generate a complex network, use the <code><a href="reference/make_bnr.html">make_bnr()</a></code> function. You need to set the number of individuals in t</p>
+<p>To generate a complex network, use the <code><a href="reference/make_bnr.html">make_bnr()</a></code> function. You need to set the number of individuals in the network <code>n</code>, and their linking probabilities <code>pb</code>, <code>pn</code> and <code>pr</code> (see an example below). To set up a new network set <code>np=c(0,0)</code>, which means that there is no ID set for who the newborn and the parent will be. Take a look at the vignette (in Articles at the top) to see how these networks can be iterated to simulate network dynamics and parameter evolution.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># Load library</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://marcosmolla.github.io/complexNet/">complexNet</a></span><span class="op">)</span>

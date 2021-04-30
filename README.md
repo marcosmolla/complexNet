@@ -7,8 +7,6 @@
 ***
 complexNet provides functions to easily generate and iterate complex networks. These networks rely on socially inherited and random connections to members of a population, as presented by [Ilany &amp; Akcay (2016)](https://www.nature.com/articles/ncomms12084). Their modelling framework has been shown to generate realistic networks with a wide range of different clustering, density, and average path length. In [Smolla &amp; Akcay (2019)](https://advances.sciencemag.org/content/5/8/eaaw0609) we have used the same algorithms to generate networks and have them dynamically evolve. 
 
-My goal with this package is to provide an easy way to generate complex networks that rely on 
-
 ## Installation
 ```r
 # Install release version from CRAN
@@ -25,7 +23,8 @@ The general idea of complex networks (in the sense of this package) is that each
 <figcaption>The schematic depicts how a new individual joins the population (as one other individual has been removed). In this case it shares a link with its parent and will connect to the parent's neighbours with probability $p_n$, and to any other individual with probability $p_r$.</figcaption>
 
 ## Usage
-To generate a complex network, use the `make_bnr()` function. You need to set the number of individuals in t
+To generate a complex network, use the `make_bnr()` function. You need to set the number of individuals in the network `n`, and their linking probabilities `pb`, `pn` and `pr` (see an example below). To set up a new network set `np=c(0,0)`, which means that there is no ID set for who the newborn and the parent will be. Take a look at the vignette (in Articles at the top) to see how these networks can be iterated to simulate network dynamics and parameter evolution. 
+
 ```r
 # Load library
 library(complexNet)
