@@ -25,6 +25,7 @@ The general idea of complex networks (in the sense of this package) is that each
 <figcaption>The schematic depicts how a new individual joins the population (as one other individual has been removed). In this case it shares a link with its parent and will connect to the parent's neighbours with probability $p_n$, and to any other individual with probability $p_r$.</figcaption>
 
 ## Usage
+To generate a complex network, use the `make_bnr()` function. You need to set the number of individuals in t
 ```r
 # Load library
 library(complexNet)
@@ -43,9 +44,11 @@ plot(G)
 ```
 
 ## Example
+Below is an example plot of networks generated with `make_bnr()` and for different social inheritance, $p_n$, and random linking, $p_r$, probabilities. As the linking probabilities increase, the networks become more connected. 
+
 ![Example figure](reference/figures/example.png)
 
-Example plot of networks generated with `make_bnr()` and for different social inheritance, $p_n$, and random linking, $p_r$, probabilities. As the linking probabilites increase, the networks become more connected. The following code generates a similar figure to the one shown here.
+The following code generates a similar figure to the one shown here.
 
 ```r
 # Load library
