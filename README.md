@@ -83,3 +83,25 @@ Ilany, A., & Akcay, E. (2016). Social inheritance can explain the structure of a
 Ilany, A., & Akçay, E. (2016). Personality and Social Networks: A Generative Model Approach. Integrative and Comparative Biology, 56(6), 1197–1205. https://doi.org/10.1093/icb/icw068
 
 Smolla, M., & Akçay, E. (2019). Cultural selection shapes network structure. Science Advances, 5(8), eaaw0609. https://doi.org/10.1126/sciadv.aaw0609
+
+
+## How to cite this package?
+```r
+> citation("complexNet")
+
+To cite package ‘complexNet’ in publications use:
+
+  Marco Smolla (2021). complexNet: Complex Network Generation.
+  R package version 0.1.0.
+  https://CRAN.R-project.org/package=complexNet
+
+A BibTeX entry for LaTeX users is
+
+  @Manual{,
+    title = {complexNet: Complex Network Generation},
+    author = {Marco Smolla},
+    year = {2021},
+    note = {R package version 0.1.0},
+    url = {https://CRAN.R-project.org/package=complexNet},
+  }
+```
