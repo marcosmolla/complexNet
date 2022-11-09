@@ -5,9 +5,9 @@
 #' @param n Number of vertices (population size)
 #' @param np numeric vector setting ids for the newborn (i.e. which individual will be replaced with a new one) and a parent(s). Length 2 or 3. If you want to randomly select an id for the newborn (first value) and parents (second and third value), simply use c(0,0) or c(0,0,0).
 #' @param pb Probability to connect to parent (default is 1)
-#' @param k Degree (number of connections a new individaul will form)
-#' @param p Maximum proportion of k that will be connections to neighbours of the parent. The complimentary k*(1-p) connections will be foremd with random other individuals
-#' @return Returns an unweighted (binary) adjacency matrix, where each cell represents the presence (1) or absence (0) of an interaction between the row and the column individual.
+#' @param k Degree (number of connections a new individual will form)
+#' @param p Maximum proportion of k that will be connections to neighbours of the parent. The complimentary k*(1-p) connections will be formed with random other individuals
+#' @return Returns an unweighed (binary) adjacency matrix, where each cell represents the presence (1) or absence (0) of an interaction between the row and the column individual.
 #' @examples
 #' make_kp(n = 10, np = c(0,0), pb = 1, k = 4, p = .5)
 #' @importFrom methods setGeneric setMethod
