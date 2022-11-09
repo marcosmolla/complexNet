@@ -3,3 +3,7 @@
 ^\.github$
 ^CRAN-SUBMISSION$
 ^cran-comments\.md$
+^docs$
+^_pkgdown\.yml$
+^pkgdown$
+^logo\.png$
