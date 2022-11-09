@@ -19,12 +19,12 @@ make_kp(n, np, pb, k, p)
 
 \item{pb}{Probability to connect to parent (default is 1)}
 
-\item{k}{Degree (number of connections a new individaul will form)}
+\item{k}{Degree (number of connections a new individual will form)}
 
-\item{p}{Maximum proportion of k that will be connections to neighbours of the parent. The complimentary k*(1-p) connections will be foremd with random other individuals}
+\item{p}{Maximum proportion of k that will be connections to neighbours of the parent. The complimentary k*(1-p) connections will be formed with random other individuals}
 }
 \value{
-Returns an unweighted (binary) adjacency matrix, where each cell represents the presence (1) or absence (0) of an interaction between the row and the column individual.
+Returns an unweighed (binary) adjacency matrix, where each cell represents the presence (1) or absence (0) of an interaction between the row and the column individual.
 }
 \description{
 This function ...

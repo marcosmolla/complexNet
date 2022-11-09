@@ -8,7 +8,7 @@
 
 # complexNet <img src="logo.png" align="right" width="125px" height="auto"/>
 ***
-complexNet provides functions to easily generate and iterate complex networks. These networks rely on socially inherited and random connections to members of a population, as presented by [Ilany &amp; Akcay (2016)](https://www.nature.com/articles/ncomms12084). Their modelling framework has been shown to generate realistic networks with a wide range of different clustering, density, and average path length. In [Smolla &amp; Akcay (2019)](https://advances.sciencemag.org/content/5/8/eaaw0609) we have used the same algorithms to generate networks and have them dynamically evolve. 
+complexNet provides functions to easily generate and iterate complex networks. These networks rely on socially inherited and random connections to members of a population, as presented by [Ilany &amp; Akcay (2016)](https://www.nature.com/articles/ncomms12084). Their modelling framework has been shown to generate realistic networks with a wide range of different clustering, density, and average path length. In [Smolla &amp; Akcay (2019)](https://www.science.org/doi/10.1126/sciadv.aaw0609) we have used the same algorithms to generate networks and have them dynamically evolve. 
 
 ## Installation
 ```r
