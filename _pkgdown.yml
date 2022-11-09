@@ -3,3 +3,5 @@ home:
   description: Create and iterate complex networks
   author: Marco Smolla
   url: https://marcosmolla.github.io/complexNet
+template:
+  bootstrap: 5

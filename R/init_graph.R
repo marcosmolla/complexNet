@@ -9,6 +9,7 @@
 #' @examples
 #' init_graph(n = 10, deg = 4)
 #' @rdname init_graph
+#' @importFrom methods setGeneric setMethod
 #' @export
 setGeneric("init_graph", function(n, deg) {standardGeneric("init_graph")})
 

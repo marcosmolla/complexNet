@@ -91,8 +91,8 @@ Smolla, M., & Akçay, E. (2019). Cultural selection shapes network structure. Sc
 
 To cite package ‘complexNet’ in publications use:
 
-  Marco Smolla (2021). complexNet: Complex Network Generation.
-  R package version 0.1.0.
+  Smolla M (2022). complexNet: Complex Network Generation.
+  R package version 0.2.0.
   https://CRAN.R-project.org/package=complexNet
 
 A BibTeX entry for LaTeX users is
@@ -100,8 +100,8 @@ A BibTeX entry for LaTeX users is
   @Manual{,
     title = {complexNet: Complex Network Generation},
     author = {Marco Smolla},
-    year = {2021},
-    note = {R package version 0.1.0},
+    year = {2022},
+    note = {R package version 0.2.0},
     url = {https://CRAN.R-project.org/package=complexNet},
   }
 ```

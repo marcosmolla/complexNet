@@ -19,6 +19,9 @@
     <loc>/index.html</loc>
   </url>
   <url>
+    <loc>/news/index.html</loc>
+  </url>
+  <url>
     <loc>/reference/avg_degree_bnr.html</loc>
   </url>
   <url>
@@ -34,6 +37,12 @@
     <loc>/reference/iterate_bnr.html</loc>
   </url>
   <url>
+    <loc>/reference/iterate_kp.html</loc>
+  </url>
+  <url>
     <loc>/reference/make_bnr.html</loc>
+  </url>
+  <url>
+    <loc>/reference/make_kp.html</loc>
   </url>
 </urlset>

@@ -4,8 +4,7 @@
 #' @param np numeric vector setting ids for the newborn (i.e. which individual will be replaced with a new one) and a parent(s). Length 2 or 3. If you want to randomly select an id for the newborn (first value) and parents (second and third value), simply use c(0,0) or c(0,0,0). For one parent, the focal individual connects to this parent with probability pb. For two parent values, the individual connects to two parents each with probability pb.
 #' @param pb Probability to connect to parent. Default is 1.
 #' @param pn Probability to connect to neighbour of parent(s)
-#' @param pr Probability to connect to individuals that are not connected to
-#' the parent
+#' @param pr Probability to connect to individuals that are not connected to the parent
 #' @return Returns an iterated version of the supplied adjacency matrix as a numeric matrix.
 #' @details If you just want to iterate the graph you can use \code{np=c(0,0)} or \code{np=c(0,0,0)}. However, the function does not return the ids of the newborn and the parent(s). If you want to keep track of the ids that are changed, you should provide these as an input to the function.
 #' @examples
@@ -17,6 +16,7 @@
 #' adjm_t0 <- make_bnr(n = 100, np=c(0,0), pb = pb, pn = pn, pr = pr)
 #' # Iterate the network
 #' adjm_t1 <- iterate_bnr(adjm = adjm_t0, np=c(0,0), pb = pb, pn = pn, pr = pr)
+#' @importFrom methods setGeneric setMethod
 #' @rdname iterate_bnr
 #' @export
 setGeneric("iterate_bnr", function(adjm, np, pb, pn, pr) {standardGeneric("iterate_bnr")})

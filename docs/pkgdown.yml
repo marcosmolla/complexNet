@@ -1,7 +1,7 @@
-pandoc: '2.13'
-pkgdown: 1.6.1
+pandoc: 2.19.2
+pkgdown: 2.0.6
 pkgdown_sha: ~
 articles:
   complexNet-vignette: complexNet-vignette.html
-last_built: 2021-05-06T17:27Z
+last_built: 2022-11-09T13:26Z
 

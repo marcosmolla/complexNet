@@ -4,7 +4,7 @@
 \alias{make_bnr}
 \alias{make_bnr,numeric,numeric,numeric,numeric,numeric-method}
 \alias{make_bnr,numeric,numeric,missing,numeric,numeric-method}
-\title{Dynamic networks updating for Pb, Pn, Pr networks}
+\title{Generating a Pb, Pn, Pr network}
 \usage{
 make_bnr(n, np, pb, pn, pr)
 
@@ -21,8 +21,7 @@ make_bnr(n, np, pb, pn, pr)
 
 \item{pn}{Probability to connect to neighbour of parent(s)}
 
-\item{pr}{Probability to connect to individuals that are not connected to
-the parent}
+\item{pr}{Probability to connect to individuals that are not connected to the parent}
 }
 \value{
 Returns an unweighted (binary) adjacency matrix, where each cell represents the presence (1) or absence (0) of an interaction between the row and the column individual.
