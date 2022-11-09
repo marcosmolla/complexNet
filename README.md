@@ -3,6 +3,7 @@
 [![](https://cranlogs.r-pkg.org/badges/grand-total/complexNet)](https://cran.r-project.org/package=complexNet)
 [![](https://www.r-pkg.org/badges/version/complexNet)](https://cran.r-project.org/package=complexNet)
 [![R-CMD-check](https://github.com/marcosmolla/complexNet/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/marcosmolla/complexNet/actions/workflows/R-CMD-check.yaml)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 <!-- badges: end -->
 
 # complexNet <img src="logo.png" align="right" width="125px" height="auto"/>
