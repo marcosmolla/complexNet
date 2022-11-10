@@ -6,7 +6,7 @@ Authors@R: c(person("Marco", "Smolla", , "drsmolla@icloud.com", role = c("aut", 
 Description: Providing a set of functions to easily generate and iterate complex networks.
  The functions can be used to generate realistic networks with a wide range of different clustering, density, and average path length.
  For more information consult research articles by Amiyaal Ilany and Erol Akcay (2016) <doi:10.1093/icb/icw068> and Ilany and Erol Akcay (2016) <doi:10.1101/026120>, which have inspired many methods in this package.
-License: GPL-3 + file LICENSE
+License: GPL-3
 Encoding: UTF-8
 LazyData: false
 RoxygenNote: 7.2.1
