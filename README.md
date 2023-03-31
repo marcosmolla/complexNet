@@ -22,7 +22,7 @@ devtools::install_github("marcosmolla/complexNet")
 ## What are complex networks?
 The general idea of complex networks (in the sense of this package) is that each individual of a group has a set of parameters that determines its probability to share an edge with certain subsets of the population. The most common version differentiates three subsets: the parent, the direct network neighbours of the parent, and everyone else. The probability to form a connection with the parent is given by the probability $p_b$. Similarly, $p_n$ is the probability to have a connection with the neighbours of the parent, and $p_r$ is the probability to connect to anyone else. Because these probabilities regard different subsets of the population, they do not have to add up to 1. So far, the algorithm is only working for asexual populations (a single parent) but will be extended to also include a two parents version in the future. 
 
-![Schematic of complex networks](reference/figures/schematic.png)
+![Schematic of complex networks](man/figures/schematic.png)
 <figcaption>The schematic depicts how a new individual joins the population (as one other individual has been removed). In this case, it shares a link with its parent and will connect to the parent's neighbours with probability $p_n$, and to any other individual with probability $p_r$.</figcaption>
 
 ## Usage
@@ -48,7 +48,7 @@ plot(G)
 ## Example
 Below is an example plot of networks generated with `make_bnr()` and for different social inheritance, $p_n$, and random linking, $p_r$, probabilities. As the linking probabilities increase, the networks become more connected. 
 
-![Example figure](reference/figures/example.png)
+![Example figure](man/figures/example.png)
 
 The following code generates a similar figure to the one shown here.
 
