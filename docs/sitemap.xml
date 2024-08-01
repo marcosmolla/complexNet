@@ -1,48 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>/404.html</loc>
-  </url>
-  <url>
-    <loc>/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>/articles/complexNet-vignette.html</loc>
-  </url>
-  <url>
-    <loc>/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>/authors.html</loc>
-  </url>
-  <url>
-    <loc>/index.html</loc>
-  </url>
-  <url>
-    <loc>/news/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/avg_degree_bnr.html</loc>
-  </url>
-  <url>
-    <loc>/reference/avg_degree_brn.html</loc>
-  </url>
-  <url>
-    <loc>/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>/reference/init_graph.html</loc>
-  </url>
-  <url>
-    <loc>/reference/iterate_bnr.html</loc>
-  </url>
-  <url>
-    <loc>/reference/iterate_kp.html</loc>
-  </url>
-  <url>
-    <loc>/reference/make_bnr.html</loc>
-  </url>
-  <url>
-    <loc>/reference/make_kp.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>/404.html</loc></url>
+<url><loc>/LICENSE-text.html</loc></url>
+<url><loc>/articles/complexNet-vignette.html</loc></url>
+<url><loc>/articles/index.html</loc></url>
+<url><loc>/authors.html</loc></url>
+<url><loc>/index.html</loc></url>
+<url><loc>/news/index.html</loc></url>
+<url><loc>/reference/avg_degree_bnr.html</loc></url>
+<url><loc>/reference/avg_degree_brn.html</loc></url>
+<url><loc>/reference/index.html</loc></url>
+<url><loc>/reference/init_graph.html</loc></url>
+<url><loc>/reference/iterate_bnr.html</loc></url>
+<url><loc>/reference/iterate_kp.html</loc></url>
+<url><loc>/reference/make_bnr.html</loc></url>
+<url><loc>/reference/make_kp.html</loc></url>
 </urlset>
+
