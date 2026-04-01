@@ -11,18 +11,24 @@
 #' @rdname init_graph
 #' @importFrom methods setGeneric setMethod
 #' @export
-setGeneric("init_graph", function(n, deg) {standardGeneric("init_graph")})
+setGeneric("init_graph", function(n, deg) {
+  standardGeneric("init_graph")
+})
 
 #' @rdname init_graph
-setMethod(f="init_graph",
-          signature=c(n = "numeric",
-                      deg = "numeric"),
-          definition = function(n, deg){
-           P <- (deg*n)/(n^2) # connection probability
-           ADJM <- matrix(0,nrow=n,ncol=n)# Set adjacency matrix
-           diag <- lower.tri(ADJM, diag = FALSE) # Select one half of the matrix
-           npairs <- sum(diag) # Number of pairs without diagonal (using only one matrix traingle)
-           ADJM[diag] <- runif(n = npairs, min = 0, max = 1) <= P;
-           ADJM <- ADJM + t(ADJM); # Populate other half of the matrix
-           return(ADJM)
-          })
+setMethod(
+  f = "init_graph",
+  signature = c(
+    n = "numeric",
+    deg = "numeric"
+  ),
+  definition = function(n, deg) {
+    P <- (deg * n) / (n^2) # connection probability
+    ADJM <- matrix(0, nrow = n, ncol = n) # Set adjacency matrix
+    diag <- lower.tri(ADJM, diag = FALSE) # Select one half of the matrix
+    npairs <- sum(diag) # Number of pairs without diagonal (using only one matrix traingle)
+    ADJM[diag] <- runif(n = npairs, min = 0, max = 1) <= P
+    ADJM <- ADJM + t(ADJM) # Populate other half of the matrix
+    return(ADJM)
+  }
+)

@@ -9,35 +9,42 @@
 #' @param pr Probability to connect to individuals that are not connected to the parent
 #' @return Returns an unweighted (binary) adjacency matrix, where each cell represents the presence (1) or absence (0) of an interaction between the row and the column individual.
 #' @examples
-#' make_bnr(n = 10, np = c(0,0), pb = 1, pn = .2, pr = .01)
+#' make_bnr(n = 10, np = c(0, 0), pb = 1, pn = .2, pr = .01)
 #' @importFrom methods setGeneric setMethod
 #' @rdname make_bnr
 #' @export
-setGeneric("make_bnr", function(n, np, pb, pn, pr) {standardGeneric("make_bnr")})
+setGeneric("make_bnr", function(n, np, pb, pn, pr) {
+  standardGeneric("make_bnr")
+})
 
 #' @rdname make_bnr
-setMethod(f="make_bnr",
-          signature=c(n = "numeric",
-                      np = "numeric",
-                      pb = "numeric",
-                      pn = "numeric",
-                      pr = "numeric"),
-          definition = function(n, np, pb, pn, pr){
-
-           adjm <- init_graph(n = n, deg = 4) # initiate graph
-           for(I in 1:(10*n)){
-            adjm <- iterate_bnr(adjm, np, pb, pn, pr) # iterate
-           }
-           return(adjm)
-          })
+setMethod(
+  f = "make_bnr",
+  signature = c(
+    n = "numeric",
+    np = "numeric",
+    pb = "numeric",
+    pn = "numeric",
+    pr = "numeric"
+  ),
+  definition = function(n, np, pb, pn, pr) {
+    adjm <- init_graph(n = n, deg = 4) # initiate graph
+    for (I in 1:(10 * n)) {
+      adjm <- iterate_bnr(adjm, np, pb, pn, pr) # iterate
+    }
+    return(adjm)
+  }
+)
 
 #' @rdname make_bnr
-setMethod(f="make_bnr",
-          signature=c(n = "numeric", np = "numeric", pb = "missing", pn = "numeric", pr = "numeric"),
-          definition = function(n, np, pb, pn, pr){
-           warning("pb not provided. Using default value pb = 1.")
-           make_bnr(n = n, np = np, pb = 1, pn = pn, pr = pr)
-          })
+setMethod(
+  f = "make_bnr",
+  signature = c(n = "numeric", np = "numeric", pb = "missing", pn = "numeric", pr = "numeric"),
+  definition = function(n, np, pb, pn, pr) {
+    warning("pb not provided. Using default value pb = 1.")
+    make_bnr(n = n, np = np, pb = 1, pn = pn, pr = pr)
+  }
+)
 
 # grid <- expand.grid(PN=10^seq(-2,0,.5), PR=10^seq(-4,-2,.5), PB=1)
 # par(mfrow=c(5,5), mar=c(1,1,1,1))

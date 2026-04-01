@@ -9,35 +9,42 @@
 #' @param p Maximum proportion of k that will be connections to neighbours of the parent. The complimentary k*(1-p) connections will be formed with random other individuals
 #' @return Returns an unweighed (binary) adjacency matrix, where each cell represents the presence (1) or absence (0) of an interaction between the row and the column individual.
 #' @examples
-#' make_kp(n = 10, np = c(0,0), pb = 1, k = 4, p = .5)
+#' make_kp(n = 10, np = c(0, 0), pb = 1, k = 4, p = .5)
 #' @importFrom methods setGeneric setMethod
 #' @rdname make_kp
 #' @export
-setGeneric("make_kp", function(n, np, pb, k, p) {standardGeneric("make_kp")})
+setGeneric("make_kp", function(n, np, pb, k, p) {
+  standardGeneric("make_kp")
+})
 
 #' @rdname make_kp
-setMethod(f="make_kp",
-          signature=c(n  = "numeric",
-                      np = "numeric",
-                      pb = "numeric",
-                      k  = "numeric",
-                      p  = "numeric"),
-          definition = function(n, np, pb, k, p){
-
-           adjm <- init_graph(n = n, deg = 4) # initiate graph
-           for(I in 1:(10*n)){
-            adjm <- iterate_kp(adjm, np, pb, k, p) # iterate
-           }
-           return(adjm)
-          })
+setMethod(
+  f = "make_kp",
+  signature = c(
+    n = "numeric",
+    np = "numeric",
+    pb = "numeric",
+    k = "numeric",
+    p = "numeric"
+  ),
+  definition = function(n, np, pb, k, p) {
+    adjm <- init_graph(n = n, deg = 4) # initiate graph
+    for (I in 1:(10 * n)) {
+      adjm <- iterate_kp(adjm, np, pb, k, p) # iterate
+    }
+    return(adjm)
+  }
+)
 
 #' @rdname make_kp
-setMethod(f="make_kp",
-          signature=c(n = "numeric", np = "numeric", pb = "missing", k = "numeric", p = "numeric"),
-          definition = function(n, np, pb, k, p){
-           warning("pb not provided. Using default value pb = 1.")
-           make_kp(n = n, np = np, pb = 1, k = k, p = p)
-          })
+setMethod(
+  f = "make_kp",
+  signature = c(n = "numeric", np = "numeric", pb = "missing", k = "numeric", p = "numeric"),
+  definition = function(n, np, pb, k, p) {
+    warning("pb not provided. Using default value pb = 1.")
+    make_kp(n = n, np = np, pb = 1, k = k, p = p)
+  }
+)
 
 # grid <- expand.grid(K=c(4,6,10,18), P=rev(c(0,.75,.85,.95,1)), PB=1)
 # par(mfrow=c(5,4), mar=c(1,1,1,1))
