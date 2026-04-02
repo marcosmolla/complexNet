@@ -2,8 +2,11 @@ Package: complexNet
 Type: Package
 Title: Complex Network Generation
 Version: 0.2.0
-Authors@R: c(person("Marco", "Smolla", , "drsmolla@icloud.com", role = c("aut", "cre"),comment = c(ORCID = "0000-0001-6367-8765")))
-Maintainer: Marco Smolla
+Authors@R: c(person("Marco", "Smolla", email = "drsmolla@icloud.com",
+                   role = c("aut", "cre"),
+                   comment = c(ORCID = "0000-0001-6367-8765")))
+Maintainer: Marco Smolla <drsmolla@icloud.com>
+Author: Marco Smolla [aut, cre]
 Description: Providing a set of functions to easily generate and iterate complex networks.
  The functions can be used to generate realistic networks with a wide range of different clustering, density, and average path length.
  For more information consult research articles by Amiyaal Ilany and Erol Akcay (2016) <doi:10.1093/icb/icw068> and Ilany and Erol Akcay (2016) <doi:10.1101/026120>, which have inspired many methods in this package.
