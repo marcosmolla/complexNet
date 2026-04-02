@@ -1,0 +1,9 @@
+repos:
+  - repo: local
+    hooks:
+      - id: r-styler
+        name: R Styler
+        entry: Rscript -e 'styler::style_pkg()'
+        language: system
+        pass_filenames: false
+        
