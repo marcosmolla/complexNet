@@ -99,24 +99,26 @@ The following code generates a similar figure to the one shown here.
 library(complexNet)
 library(igraph)
 
-par(mfrow=c(3,3), mar=rep(1.2,4))
-apply(X = expand.grid(c(.1,.3,.5), c(0.01,0.03,0.05)), 1, function(p) {
- # Create adjacency matrix for a complex network
- ADJM <- make_bnr(n = 50, np = c(0,0), pb = 1, pn = p[1], pr = p[2])
- # Convert adjacency matrix to an igraph network
- G <- graph_from_adjacency_matrix(ADJM)
- # Calculate node degree centrality
- deg <- degree(G)
- # Select node colour based on its degree centrality
- V(G)$color <- heat.colors(rev = T, n = 25)[deg+1]
- # Plot network
- plot(G,
-      main=paste("p_n: ",p[1],", p_r:",p[2], sep=""),
-      vertex.label=NA,
-      vertex.size=10,
-      edge.arrow.size=0,
-      vertex.color=V(G)$color)
+par(mfrow = c(3, 3), mar = rep(1.2, 4))
+apply(X = expand.grid(c(.1, .3, .5), c(0.01, 0.03, 0.05)), 1, function(p) {
+  # Create adjacency matrix for a complex network
+  ADJM <- make_bnr(n = 50, np = c(0, 0), pb = 1, pn = p[1], pr = p[2])
+  # Convert adjacency matrix to an igraph network
+  G <- graph_from_adjacency_matrix(ADJM)
+  # Calculate node degree centrality
+  deg <- degree(G)
+  # Select node colour based on its degree centrality
+  V(G)$color <- heat.colors(rev = T, n = 25)[deg + 1]
+  # Plot network
+  plot(G,
+    main = paste("p_n: ", p[1], ", p_r:", p[2], sep = ""),
+    vertex.label = NA,
+    vertex.size = 10,
+    edge.arrow.size = 0,
+    vertex.color = V(G)$color
+  )
 })
+
 ```
 
 ## Out there
